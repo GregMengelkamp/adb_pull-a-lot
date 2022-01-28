@@ -1,0 +1,12 @@
+{
+    "maxdepth": 3,
+    "exclude": [
+        "*.img", 
+        "*.mp3",
+        "*Android*"
+    ],
+    "paths": [
+        "DCIM/",
+        "Telegram/Telegram Images/"
+    ]
+}
