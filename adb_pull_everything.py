@@ -64,10 +64,14 @@ def main():
         if name[-1] != '"' and name[0] != '"':
             name = '"' + name + '"'
         print(f"{name}")
-    if input(
-        f"Press Enter to pull the listed files to your specified directory. {target}"
+    if (
+        input(
+            f"Press Enter to pull the listed files to your specified directory. {target}"
+        )
+        == ""
     ):
-        subprocess.call(f"adb pull -p {name} {target}")
+        for name in names:
+            subprocess.call(f"adb pull -p {name} {target}")
     input("Done, press any key to exit.")
 
 
